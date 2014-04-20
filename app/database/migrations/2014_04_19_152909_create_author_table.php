@@ -17,9 +17,9 @@ class CreateAuthorTable extends Migration {
         {
             //
             $table->increments('id');
-            $table->string('name');
-            $table->string('password');
-            $table->integer('age');
+            $table->string('name', 20)->unique()->comment('账号');
+            $table->string('password', 20)->comment('密码');
+            $table->integer('age')->nullable()->comment('年龄');
             $table->timestamps();
         });
 	}
