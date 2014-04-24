@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.fon_content{width:540px; float: left; }
+
+/* --------------个性设置----------- */
+
+.open_set{ width:450px;float: left;}
+.open_set select{ background-color:#F5F5F5;    height: 25px; line-height:25px;}
+.open_set ul li{ line-height:30px; height:30px; border-bottom: #F2F2F2 solid 1px;  margin-bottom:10px; margin-left:-1px; padding:4px;}
+.open_set ul li label{ width:130px; display:block ; float:left;height:30px;line-height:30px;}
+.open_set ul li label input[type='checkbox']{ vertical-align:middle; margin-top:8px; margin-left:10px;}
+
+
+
+/* ---------上传剧照------------- */
+.content h2{ height:35px; line-height:35px; font-weight:normal;  color:#666;}
+.content li{ width:441px; overflow:hidden; margin-bottom:10px;}
+.content li img{ float:left;}
+.content li span{ float:left; height:20px;  margin-left:10px;}
+.content li textarea { width:200px; height:26px;background-color: #f6f6f6; outline: 0;min-height: 30px;  max-height: 300px; _height: 120px;margin-left: auto;margin-right: auto; word-wrap: break-word;    overflow-x: hidden;    overflow-y: auto;    _overflow-y: visible;position:relative;	z-index:1; color:#666666}
+.content li img{ float:left; margin-right:10px;}
+.content li .uppic_l{ float:left; color: #999999; line-height:20px;}
+.uppic_r{ float:right !important} 
+.uppic { height:14px; background-color:#EFEFEF; width:400px; } 
+.uppic img{ float:right} 
+.contitle{ width:441px; overflow:hidden; margin:20px 0;line-height:35px;}
+.uppic_l img{width:400px; }
+
+
+/* ---------------添加影片-------- */
+
+
+/* 隐藏样式 */
+.plTitle em {font-style:normal; font-weight:normal; line-height: 29px; margin-left:120px; background: url(../images/icon3_more.gif) no-repeat left center; padding-left: 15px; cursor: pointer; color:#CCC}
+.plTitle { float: left; width: 530px; }
+.jzbkCon { padding-bottom: 35px; }
+
+/* 添加电影内容 */
+form fieldset{ border:none }
+form.detail_form .item {margin: 0 0 12px 0;	font: 12px/26px Arial,Helvetica, sans-serif}
+form.detail_form .inp_list{ margin-left:120px;}
+form.detail_form input.input_basic { vertical-align: middle; width:142px}
+form.detail_form .item label {	color: #888;font: 14px/26px Arial, Helvetica, sans-serif;text-align: right;	float: left;
+	width: 80px;	margin: 0 40px 0 0}
+form.detail_form .item label .required {font: 12px/26px Arial, Helvetica, sans-serif}
+form.detail_form .item label.sub {	display: inline;	float: none;margin-right: 5px;	*margin-right: 3px;	color: #111;	font: 12px/26px Arial, Helvetica, sans-serif;}
+form .item span{ color:#aaaaaa; }
+form.detail_form .dropdown {overflow: visible}
+form.detail_form .dropdown .opts-group {	margin-left: 120px;	position: relative;	left: 0;	top: 0}
+form.detail_form .dropdown .opts-group .error {	position: absolute;	left: 170px;	top: 0;}
+form.detail_form .dropdown .opts-group .options {	display: none;	background: #fff;	width: 168px;	position: absolute;	left: 0;	top: 28px;	border: 1px solid #ccc;	z-index: 1;	border-bottom: 0 none;}
+
+form.detail_form .dropdown .opts-group .options li {background:none repeat scroll 0 0 #FFFFFF;	background: #fff;	line-height: 14px;	border-bottom: 1px solid #ccc;	padding: 0 0 0 5px;}
+form.detail_form .dropdown .opts-group .options li input.opts-ck {	float: left;	margin: 6px 4px 0 0;	*margin: 0 3px 0 0;}
+form.detail_form .dropdown .opts-group .options li label.sub {	word-wrap: break-word;
+	display: inline-block;	text-align: left;	line-height: 24px;	margin: 0}
+form.detail_form .dropdown .opts-group .options li label.sub {	*display: inline}
+form.detail_form .multiple .opts-group .options li label.sub {	width: 138px;	*width: 128px}
+form.detail_form .dropdown .opts-group .options li a.add {	font-size: 12px;	line-height: 24px;	display: block}
+form.detail_form .dropdown .opts-group .options li a.add:hover {	background: 0;	color: #666}
+form.detail_form .dropdown .opts-group .options li a.save {	color: #aaa;	font-size: 12px;	line-height: 24px;	display: none}
+form.detail_form .dropdown .opts-group .options li a.save:hover {	background: #aaa;	color: #fff}
+form.detail_form .dropdown .opts-group .options li input.additional {	border: 0 none;	width: 120px;	height: 18px;	padding: 2px 0;	margin: 0;	display: none;	background: transparent}
+form.detail_form .dropdown .opts-group .selector {	height: 28px;	background: url('../images/selector_bg2.png') no-repeat left center;	width: 352px;	padding: 0 5px;	position: relative;	left: 0;	top: 0;	margin-right: 5px}
+form.detail_form .dropdown .opts-group .selector label {	cursor: pointer;	width: 135px;	color: #111;	display: inline;	font-size: 12px;	text-align: left;	margin: 0}
+form.detail_form .item label { width: 95px; margin-right: 25px }
+form.detail_form .item .sub { width: 130px;}
+form.detail_form .limited-8 .opts-group .options,form.detail_form .dropdown .opts-group .options { width: 160px; *width: 316px; _width: 322px }
+form.detail_form .dropdown .opts-group .options2 { width: 336px; *width: 316px; _width: 322px }
+form.detail_form .limited-8 .opts-group .options li { float: left ;}
+
+.content_text{ width:540px; float:left; line-height:25px;}/*添加成功文本 */ 
+.content_text ul li{ line-height:25px; font-size:14px;}
+.content_text ul li span{ width:130px; display:block; float:left; text-align:right; font-size:14px; margin-right:10px; color:#999}
+.content_text ul li label{ width:380px; display:block; float:left; min-height:25px;}
+
+/*个人设置 */
+.item label {	color: #888 ;text-align:left;float: left;  }
+.opts-group2 {	margin-left: 120px;	position: relative;	left: 0;	top: 0;	 z-index:100; font-size:12px}
+.s_la{font-size:12px!important; color:#999!important; text-align:left!important }
+.options {	display: none;	background: #fff;	width:404px;	position: absolute;	left: 0; top:28px;border: 1px solid #ccc;}
+.options li {background:none repeat scroll 0 0 #FFFFFF;	background: #fff;line-height: 12px;	float: left ; }
+.options div{float:left; width:400px;padding:2px; font:12px; background-color:#EBEBEB  }
+.opts-ck {margin: 6px 2px 0 6px;	*margin: 0 3px 0 0;}
+.selector {	height: 28px;	background: url('../images/selector_bg2.png') no-repeat left center;	width: 152px;	padding: 0 5px;	position: relative;	left: 0;	top: 0;	margin-right: 5px;	cursor:pointer;}
+
+/* 影片分类_ */
+
+.category_title{ float:left; height:20px;  width:533px; font-size:14px;}/* 菜单 */
+.category {float:left; width:533px;}/* 多个 文字连接 */
+.categoryr ul li{ float:left; line-height:25px; }
+.category a { color:#ababab ; padding:5px 8px 5px 0px; float: left}
+
+
+

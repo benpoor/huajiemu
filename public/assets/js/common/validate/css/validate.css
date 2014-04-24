@@ -1,0 +1,77 @@
+
+/* 验证出错提示框 */
+.tooltiptable {
+	margin:3px;
+}
+
+.topleft,
+.topcenter, 
+.topright, 
+.bodyleft,
+.tooltipcontent,
+.bodyright, 
+.footerleft,
+.footercenter,
+.footerright 
+{
+background-image:url(../image/tooltipbox.gif); 
+background-position:left top;
+background-repeat:no-repeat;
+}
+
+.corner {
+	font-size:1px;
+	height:12px;
+	line-height:1px;
+	width:12px;
+}
+.topcenter {
+	background-position:center top;
+}
+
+.tooltipcontent {
+	color:#757168;
+	font-family:Tahoma,SimSun,Verdana,sans-serif;
+	font-size:12px;
+	line-height:15px;
+	padding:3px 0 1px 1px;
+	text-align:justify;
+}
+.bodyright {
+background-position:right center;
+}
+.footerleft {
+background-position:left bottom;
+}
+.footercenter {
+background-position:center bottom;
+}
+.footerright {
+background-position:right bottom;
+}
+.tooltipcontent {
+	background-position:center center;
+}
+.bodyleft {
+	background-position:left center;
+}
+.tooltipfang {
+	background-image:url(../image/Callouts.gif);
+	background-position:0 0;
+	background-repeat:no-repeat;
+	font-size:1px;
+	height:11px;
+	line-height:1px;
+	position:absolute;
+	width:11px;
+}
+.topright {
+	background-position:right top;
+}
+.tooltipfang {
+	background-position:0 -44px;
+	left:0;
+	top:42%;
+}
+
+/* end 验证出错提示框 */
