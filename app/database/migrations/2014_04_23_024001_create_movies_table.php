@@ -38,6 +38,8 @@ class CreateMoviesTable extends Migration {
             $table->string('director', 128)->comment('导演');
             $table->string('cast', 128)->comment('主演');
             $table->integer('user_id')->unsigned()->comment('发布者id');
+            $table->integer('category_id')->unsigned()->comment('分类id');
+            $table->integer('area_id')->unsigned()->comment('地区id');
             $table->integer('status')->default(0)->comment('状态0:停用1:启用');
             $table->timestamps();
         });
