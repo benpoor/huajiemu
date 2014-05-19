@@ -3,16 +3,16 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTopicTable extends Migration {
+class CreateTopicsTable extends Migration {
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-		//话题表
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        //话题表
         Schema::create('topics', function(Blueprint $table){
             $table->increments('id');
             $table->string('title',128)->comment('话题标题');
@@ -31,18 +31,18 @@ class CreateTopicTable extends Migration {
             $table->integer('topic_id')->unsigned()->comment('话题id');
             $table->timestamps();
         });
-	}
+    }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		//
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
         Schema::dropIfExists('topic_replays');
         Schema::dropIfExists('topics');
-	}
+    }
 
 }

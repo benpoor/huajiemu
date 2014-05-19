@@ -49,6 +49,7 @@ class CreateAuthorTable extends Migration {
 	{
 		//
         Schema::dropIfExists('users');
+        Schema::dropIfExists('comments');
 	}
 
 }

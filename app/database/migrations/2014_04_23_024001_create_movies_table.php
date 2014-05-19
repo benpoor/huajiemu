@@ -16,7 +16,7 @@ class CreateMoviesTable extends Migration {
         Schema::create('movie_categories', function(Blueprint $table){
             $table->increments('id');
             $table->string('name', 32)->unique()->comment('分类名称');
-            $table->string('remark', 64)-nullable()->comment('分类描述');
+            $table->string('remark', 64)->nullable()->comment('分类描述');
             $table->integer('status')->default(0)->comment('状态0:停用1:启用');
             $table->timestamps();
         });
@@ -24,7 +24,7 @@ class CreateMoviesTable extends Migration {
         Schema::create('movie_areas', function(Blueprint $table){
             $table->increments('id');
             $table->string('name', 32)->unique()->comment('地区名称');
-            $table->string('remark', 64)-nullable()->comment('分类描述');
+            $table->string('remark', 64)->nullable()->comment('分类描述');
             $table->integer('status')->default(0)->comment('状态0:停用1:启用');
             $table->timestamps();
         });
