@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'huajiemu',
 			'username'  => 'root',
-			'password'  => '123456',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_general_ci',
 			'prefix'    => '',

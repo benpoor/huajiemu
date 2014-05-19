@@ -4,6 +4,7 @@
 
 @section('beforeStyle')
     {{ style('bootstrap-3.0.3') }}
+
 @parent @stop
 
 @section('style')

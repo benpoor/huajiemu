@@ -12,15 +12,15 @@ class AuthorityController extends BaseController{
      * 页面：登录
      * @return response
      */
-    public function getLogin(){
-        return View::make('authority.login');
+    public function getSignin(){
+        return View::make('authority.signin');
     }
 
     /**
      * 动作：登录
      * @return Response
      */
-    public function postLogin(){
+    public function postSignin(){
         // 凭证
         $credentials = array('email'=>Input::get('email'), 'password'=>Input::get('password'));
         // 是否记住登录状态
