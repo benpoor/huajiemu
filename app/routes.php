@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
 /*
 |--------------------------------------------------------------------------
 | 基础权限
@@ -42,4 +38,21 @@ Route::group(array('prefix' => 'auth'), function () {
         Route::get(  'forgot-password/{token}', array('as' => 'reset'         , 'uses' => $Authority.'getReset'));
         Route::post( 'forgot-password/{token}', $Authority.'postReset');
     });
+});
+
+/*
+|--------------------------------------------------------------------------
+| 电影
+|--------------------------------------------------------------------------
+*/
+Route::group(array(), function () {
+    $Blog = 'MovieController@';
+    # 博客首页
+    Route::get(            '/', array('as' => 'home'            , 'uses' => $Blog.'getIndex'));
+    # 分类文章列表
+    Route::get('category/{id}', array('as' => 'categoryArticles', 'uses' => $Blog.'getCategoryArticles'));
+    # 展示博客文章
+    Route::get(       '{slug}', array('as' => 'blog.show'       , 'uses' => $Blog.'getBlogShow'));
+    # 提交文章评论
+    Route::post(      '{slug}', $Blog.'postBlogComment')->before('auth');
 });
