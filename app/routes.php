@@ -46,13 +46,61 @@ Route::group(array('prefix' => 'auth'), function () {
 |--------------------------------------------------------------------------
 */
 Route::group(array(), function () {
-    $Blog = 'MovieController@';
+    $Movie = 'MovieController@';
     # 博客首页
-    Route::get(            '/', array('as' => 'home'            , 'uses' => $Blog.'getIndex'));
-    # 分类文章列表
-    Route::get('category/{id}', array('as' => 'categoryArticles', 'uses' => $Blog.'getCategoryArticles'));
-    # 展示博客文章
-    Route::get(       '{slug}', array('as' => 'blog.show'       , 'uses' => $Blog.'getBlogShow'));
-    # 提交文章评论
-    Route::post(      '{slug}', $Blog.'postBlogComment')->before('auth');
+    Route::get(            '/', array('as' => 'home'            , 'uses' => $Movie.'getIndex'));
+//    # 分类文章列表
+//    Route::get('category/{id}', array('as' => 'categoryArticles', 'uses' => $Movie.'getCategoryArticles'));
+//    # 展示博客文章
+//    Route::get(       '{slug}', array('as' => 'blog.show'       , 'uses' => $Movie.'getBlogShow'));
+//    # 提交文章评论
+//    Route::post(      '{slug}', $Movie.'postBlogComment')->before('auth');
+});
+
+/*
+|--------------------------------------------------------------------------
+| 管理员后台
+|--------------------------------------------------------------------------
+*/
+//Route::group(array('prefix' => 'admin', 'before' => 'auth|admin'), function () {
+Route::group(array('prefix' => 'admin'), function () {
+    $Admin = 'AdminController@';
+    # 后台首页
+    Route::get('/', array('as' => 'admin', 'uses' => $Admin.'getIndex'));
+    # 用户管理
+    Route::group(array('prefix' => 'users'), function () {
+        $resource   = 'users';
+        $controller = 'Admin_UserResource@';
+        Route::get(        '/', array('as' => $resource.'.index'  , 'uses' => $controller.'index'  ));
+        Route::get(   'create', array('as' => $resource.'.create' , 'uses' => $controller.'create' ));
+        Route::post(       '/', array('as' => $resource.'.store'  , 'uses' => $controller.'store'  ));
+        // Route::get(     '{id}', array('as' => $resource.'.show'   , 'uses' => $controller.'show'   ));
+        Route::get('{id}/edit', array('as' => $resource.'.edit'   , 'uses' => $controller.'edit'   ))->before('not.self');
+        Route::put(     '{id}', array('as' => $resource.'.update' , 'uses' => $controller.'update' ))->before('not.self');
+        Route::delete(  '{id}', array('as' => $resource.'.destroy', 'uses' => $controller.'destroy'))->before('not.self');
+    });
+    # 文章分类管理
+    Route::group(array('prefix' => 'categories'), function () {
+        $resource   = 'categories';
+        $controller = 'Admin_CategoryResource@';
+        Route::get(        '/', array('as' => $resource.'.index'  , 'uses' => $controller.'index'  ));
+        Route::get(   'create', array('as' => $resource.'.create' , 'uses' => $controller.'create' ));
+        Route::post(       '/', array('as' => $resource.'.store'  , 'uses' => $controller.'store'  ));
+        // Route::get(     '{id}', array('as' => $resource.'.show'   , 'uses' => $controller.'show'   ));
+        Route::get('{id}/edit', array('as' => $resource.'.edit'   , 'uses' => $controller.'edit'   ));
+        Route::put(     '{id}', array('as' => $resource.'.update' , 'uses' => $controller.'update' ));
+        Route::delete(  '{id}', array('as' => $resource.'.destroy', 'uses' => $controller.'destroy'));
+    });
+    # 文章管理
+    Route::group(array('prefix' => 'articles'), function () {
+        $resource   = 'articles';
+        $controller = 'Admin_ArticleResource@';
+        Route::get(        '/', array('as' => $resource.'.index'  , 'uses' => $controller.'index'  ));
+        Route::get(   'create', array('as' => $resource.'.create' , 'uses' => $controller.'create' ));
+        Route::post(       '/', array('as' => $resource.'.store'  , 'uses' => $controller.'store'  ));
+        // Route::get(     '{id}', array('as' => $resource.'.show'   , 'uses' => $controller.'show'   ));
+        Route::get('{id}/edit', array('as' => $resource.'.edit'   , 'uses' => $controller.'edit'   ));
+        Route::put(     '{id}', array('as' => $resource.'.update' , 'uses' => $controller.'update' ));
+        Route::delete(  '{id}', array('as' => $resource.'.destroy', 'uses' => $controller.'destroy'));
+    });
 });
