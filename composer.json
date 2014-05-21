@@ -13,8 +13,13 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php"
-		]
+			"app/tests/TestCase.php",
+            "app/libraries/class",
+            "app/libraries/function"
+		],
+        "files": [
+            "app/libraries/function/helper.php"
+        ]
 	},
 	"scripts": {
 		"post-install-cmd": [
